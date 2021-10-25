@@ -1,0 +1,42 @@
+{
+    "description": {
+        "message": "Diese Erweiterung klickt für Sie auf die Schaltfläche \"Nur essentielle Cookies\"",
+        "description": "description of extension"
+    },
+    "extensionFullTitle": {
+        "message": "Disable cookies - deaktiviert automatisch Cookie-Nachrichten",
+        "description": "full title of extension"
+    },
+    "extensionName": {
+        "message": "Disable cookies",
+        "description": "name of extension"
+    },
+    "clickForDisable": {
+        "message": "Klicken, um die Erweiterung auf dieser Site zu deaktivieren"
+    },
+    "clickForEnable": {
+        "message": "Klicken, um die Erweiterung auf dieser Site zu aktivieren"
+    },
+    "reportThisWebsite": {
+        "message": "Diese Site melden"
+    },
+    "descriptionWhyReportWebsite": {
+        "message": "Ich werde sicherstellen, dass diese Site beim nächsten Update integriert wird"
+    },
+    "madeWithLoveBy": {
+        "message": "Made with ❤️ by"
+    },
+    "cookiesPopupHasBeenClosed": {
+        "message": "Das Cookies-Fenster wurde geschlossen"
+    },
+    "noCookiesPopupWasFound": {
+        "message": "Es wurde kein Cookie-Fenster gefunden"
+    },
+    "sent": {
+        "message": "Gesendet 👍",
+        "description": "for button when request of report have been send"
+    },
+    "errorOccured": {
+        "message": "Ein Fehler ist aufgetreten"
+    }
+}

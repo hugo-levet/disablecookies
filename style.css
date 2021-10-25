@@ -1,0 +1,154 @@
+:root {
+    --main-color: #5f6fdd;
+    --complementary-color: #ae26f4;
+    --grey: #6a5c70;
+    --white: #fdfaff;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+header #blacklistInput {
+    cursor: pointer;
+}
+
+header #blacklistInput input[name="blackList"] {
+    display: none;
+}
+
+header>h1 {
+    margin: 0;
+    max-width: max-content;
+    font-size: 1.6em;
+    position: relative;
+    bottom: -4px;
+}
+
+header>img, header #blacklistInput>svg {
+    /* background-color: royalblue; */
+    height: 30px;
+}
+
+header #blacklistInput>svg.check {
+    color: var(--main-color)
+}
+
+header #blacklistInput>svg.uncheck {
+    color: var(--grey);
+}
+
+header #blacklistInput>svg.check {
+    display: block;
+}
+
+header #blacklistInput>svg.check {
+    display: none;
+}
+
+header #blacklistInput.notInBlacklist>svg.check {
+    display: block;
+}
+
+header #blacklistInput.notInBlacklist>svg.uncheck {
+    display: none;
+}
+
+header #blacklistInput.inBlacklist>svg.check {
+    display: none;
+}
+
+header #blacklistInput.inBlacklist>svg.uncheck {
+    display: block;
+}
+
+#cookieIsDisable {
+    margin: 0.5em 0;
+    white-space: nowrap;
+    font-size: 1.4em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 5px auto 0 auto;
+    background-color: var(--main-color);
+    /* background: linear-gradient( 133deg, var(--main-color), var(--complementary-color)); */
+    border: none;
+    border-radius: 999px;
+    padding: 5px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+button:hover {
+    background-color: var(--complementary-color);
+    /* background: linear-gradient( 313deg, var(--main-color), var(--complementary-color)); */
+}
+
+button.load .loader span {
+    background-color: white;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* LOADER */
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: var(--main-color);
+    margin: 0 5px;
+    transform: scale(0.5);
+}
+
+.loader span:nth-child(1) {
+    animation: opacitychange 2s ease-in-out infinite;
+}
+
+.loader span:nth-child(2) {
+    animation: opacitychange 2s ease-in-out 0.2s infinite;
+}
+
+.loader span:nth-child(3) {
+    animation: opacitychange 2s ease-in-out 0.4s infinite;
+}
+
+@keyframes opacitychange {
+    0%, 100% {
+        transform: scale(0.5);
+    }
+    60% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "description": {
+        "message": "This extension click for you on \"Just functional cookies\" button",
+        "description": "description of extension"
+    },
+    "extensionFullTitle": {
+        "message": "Disable cookies - auto disable popup cookies",
+        "description": "full title of extension"
+    },
+    "extensionName": {
+        "message": "Disable cookies",
+        "description": "name of extension"
+    },
+    "clickForDisable": {
+        "message": "Click for disable extension on this website"
+    },
+    "clickForEnable": {
+        "message": "Click for enable extension on this website"
+    },
+    "reportThisWebsite": {
+        "message": "Report this website"
+    },
+    "descriptionWhyReportWebsite": {
+        "message": "By reporting this site, I could make the extension take it into account"
+    },
+    "madeWithLoveBy": {
+        "message": "Made with ❤️ by"
+    },
+    "cookiesPopupHasBeenClosed": {
+        "message": "Cookies popup has been closed"
+    },
+    "noCookiesPopupWasFound": {
+        "message": "No cookies popup was found"
+    },
+    "sent": {
+        "message": "Sent 👍",
+        "description": "for button when request of report have been send"
+    },
+    "errorOccured": {
+        "message": "An error has occurred"
+    }
+}

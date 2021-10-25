@@ -1,0 +1,42 @@
+{
+    "description": {
+        "message": "Cette extension clique pour toi sur le bouton \"Juste les cookies essentiels\"",
+        "description": "description of extension"
+    },
+    "extensionFullTitle": {
+        "message": "Disable cookies - désactive automatiquement les messages de cookies",
+        "description": "full title of extension"
+    },
+    "extensionName": {
+        "message": "Disable cookies",
+        "description": "name of extension"
+    },
+    "clickForDisable": {
+        "message": "Clique pour désactiver l'extension sur ce site"
+    },
+    "clickForEnable": {
+        "message": "Clique pour activer l'extension sur ce site"
+    },
+    "reportThisWebsite": {
+        "message": "Signaler ce site"
+    },
+    "descriptionWhyReportWebsite": {
+        "message": "Je ferai en sorte d'intégrer ce site lors de la prochaine mise à jour"
+    },
+    "madeWithLoveBy": {
+        "message": "Fait avec le ❤️ par"
+    },
+    "cookiesPopupHasBeenClosed": {
+        "message": "La fenêtre de cookies a été fermée"
+    },
+    "noCookiesPopupWasFound": {
+        "message": "Aucune fenêtre de cookies n'a été trouvée"
+    },
+    "sent": {
+        "message": "Envoyé 👍",
+        "description": "for button when request of report have been send"
+    },
+    "errorOccured": {
+        "message": "Une erreur est survenue"
+    }
+}

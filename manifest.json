@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "version": "2.3.0",
+    "name": "__MSG_extensionFullTitle__",
+    "description": "__MSG_description__",
+    "default_locale": "en",
+    "icons": {
+        "128": "128.png"
+    },
+    "offline_enabled": true,
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "page_action": {
+        "default_title": "__MSG_extensionFullTitle__",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "storage"
+    ]
+}
