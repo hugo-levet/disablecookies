@@ -91,7 +91,12 @@ function disableCookies() {
 
     try {
         // if else for check type of cookies and resolve it
-        if (location.hostname == "www.youtube.com") { // youtube
+        if (location.hostname == "netflix.com") { // netflix
+            const rejectButton = document.getElementById('onetrust-reject-all-handler')
+            waitForElementToDisplay('#onetrust-reject-all-handler', function () {
+                rejectButton.click();
+            }, 1000, 5000);
+        } else if (location.hostname == "www.youtube.com") { // youtube
             waitForElementToDisplay('tp-yt-paper-dialog#dialog', function () {
                 let preferSettingButton = document.querySelector('tp-yt-paper-dialog#dialog [href*="consent.youtube.com"]');
                 preferSettingButton.click();
