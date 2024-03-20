@@ -101,6 +101,11 @@ function disableCookies() {
                 let preferSettingButton = document.querySelector('tp-yt-paper-dialog#dialog [href*="consent.youtube.com"]');
                 preferSettingButton.click();
             }, 1000, 5000);
+        } else if (
+            location.hostname == "consent.youtube.com"
+            || location.hostname == "consent.google.com"
+        ) { // youtube/google consent page
+            document.querySelector("c-wiz form:nth-child(1) button > div:nth-child(3)").click();
         } else if (location.hostname == "stackoverflow.com") { // stackoverflow.com
             waitForElementToDisplay('.js-consent-banner', function () {
                 let preferSettingButton = document.querySelector('.js-consent-banner button.js-cookie-settings');
@@ -114,6 +119,12 @@ function disableCookies() {
                 }, 1000, 5000);
             }, 1000, 5000);
         } else if (location.hostname == "www.facebook.com") { // facebook
+            setTimeout(() => {
+                if (document.querySelector("[aria-label=\"Refuser les cookies optionnels\"]") !== null) { // facebook fr
+                    document.querySelector("[aria-label=\"Refuser les cookies optionnels\"]").click();
+                }
+            }, 1000);
+
             waitForElementToDisplay('[data-testid="cookie-policy-dialog"]', function () {
                 let preferSettingButton = document.querySelector('[data-cookiebanner="manage_button"]');
                 preferSettingButton.click();
@@ -133,12 +144,28 @@ function disableCookies() {
                 });
                 document.querySelector('[role="presentation"] .aOOlW.bIiDR').click();
             }, 1000, 5000);
+        } else if (location.hostname == "bing.com" || location.hostname == "www.bing.com") { // bing
+            const rejectButton = document.querySelector('.bnp_btn_reject')
+            waitForElementToDisplay('.bnp_btn_reject', function () {
+                setTimeout(() => {
+                    rejectButton.click();
+                }, 1000);
+            }, 1000, 5000);
         } else if (document.querySelector('.a-declarative[data-action="sp-cc"]') !== null) { // amazon
             document.getElementById('sp-cc-customize').click();
         } else if (document.querySelector('[aria-labelledby="savePrefs-announce"]') !== null) { // rest of amazon 
             document.querySelector('[aria-labelledby="savePrefs-announce"]').click();
         } else if (document.getElementById('gdpr-banner-decline') !== null) { // ebay
             document.getElementById('gdpr-banner-decline').click();
+        } else if (document.querySelector('[data-ta-locator="GDPRConsent-FlatButton-Decline"]') !== null) { // streamate
+            document.querySelector('[data-ta-locator="GDPRConsent-FlatButton-Decline"]').click();
+
+        } else if (document.querySelector("div.fc-consent-root button.fc-cta-manage-options") !== null) { // global banner editor
+            document.querySelector("div.fc-consent-root button.fc-cta-manage-options").click();
+            document.querySelectorAll(".fc-consent-root div.fc-dialog-container .fc-preference-slider > input").forEach(element => {
+                element.checked = false;
+            });
+            document.querySelector("div.fc-consent-root button.fc-confirm-choices").click();
         }
         /* after this line code is old (waitElementToDisplay did not exist) */
         else if (document.getElementsByClassName('_1OhNBA')[0] !== undefined) {
@@ -162,8 +189,6 @@ function disableCookies() {
             document.getElementsByClassName('EM1Mrb')[0].style.overflow = 'auto';
         } else if (document.getElementById('VnjCcb') !== null) { // google
             document.getElementById('VnjCcb').click();
-            // document.getElementById('Sx9Kwc').remove();
-            // document.getElementsByClassName('EM1Mrb')[0].style.overflow = 'auto';
         } else if (document.getElementById('axeptio_overlay') !== null) { // axeptio
             document.getElementById('axeptio_overlay').style.display = 'none';
             setTimeout(() => {
