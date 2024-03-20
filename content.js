@@ -137,6 +137,8 @@ function disableCookies() {
             document.getElementById('sp-cc-customize').click();
         } else if (document.querySelector('[aria-labelledby="savePrefs-announce"]') !== null) { // rest of amazon 
             document.querySelector('[aria-labelledby="savePrefs-announce"]').click();
+        } else if (document.getElementById('gdpr-banner-decline') !== null) { // ebay
+            document.getElementById('gdpr-banner-decline').click();
         }
         /* after this line code is old (waitElementToDisplay did not exist) */
         else if (document.getElementsByClassName('_1OhNBA')[0] !== undefined) {
