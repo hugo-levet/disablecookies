@@ -33,7 +33,7 @@ const reportWebsite = data => {
     document.getElementById('reportWebsite').disabled = true;
     document.getElementById('reportWebsite').style.minWidth = width + 'px';
     // send to hugolevet.fr data.url;
-    fetch('https://hugolevet.fr/json/reportWebsite.php?url=' + encodeURIComponent(data.url))
+    fetch('https://bazar.hugolevet.fr/disablecookies/json/reportWebsite.php?url=' + encodeURIComponent(data.url))
         .then(function (response) {
             return response.json();
         })
